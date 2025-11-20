@@ -1,18 +1,34 @@
-# React + Vite
+> **ᚠᚱᛟᚷᚱᚨᛗᛗᛁᛝ — 프로그래밍? 그것은 단순한 '기술'이 아니라, 수학과 예술의 경계를 넘나드는 완벽한 조화이니라.**  
+> _Programming? It is not merely 'technique', but a perfect blend of mathematics and art, transcending their boundaries._  
+> _Programmatione? Non tantum 'ars' est, sed perfecta coniunctio mathematicae et artis, limites eorum transcendens._
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ᛗ Author
 
-Currently, two official plugins are available:
+Ing. Regina Sadrieva
+Certified Scrum Master II | Senior IT Analyst | Front-End Developer
+I write code the way witches cast circles: precisely, deliberately, and never twice the same.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ᛞ Description
 
-## React Compiler
+This project is part of my journey as a Front-End Developer.  
+Each line is forged with clarity, focus, and silent fire.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## ᛟ Technologies Used
 
-Note: This will impact Vite dev & build performances.
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Vite
+- Node.js
 
-## Expanding the ESLint configuration
+## ᚨᚲᛇᛃᛟ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Let the flow of code become effortless.  
+Let fire of skill awaken.  
+Let all barriers fall.  
+Let harvest come.  
+Let the craft become mine.
+
+Unseal the code `index.html`
+https://reginasadrieva.github.io/0-REACT-TO-DO/
