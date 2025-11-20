@@ -30,5 +30,5 @@ Let all barriers fall.
 Let harvest come.  
 Let the craft become mine.
 
-Unseal the code `index.html`
+Unseal the code `index.html` via workflow
 https://reginasadrieva.github.io/0-REACT-TO-DO/
