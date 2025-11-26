@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://reginasadrieva.github.io/0-REACT-TO-DO/",
+  //"homepage": "https://reginasadrieva.github.io/0-REACT-TO-DO/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
