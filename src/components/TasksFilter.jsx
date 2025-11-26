@@ -1,15 +1,32 @@
-export default function TasksFilter() {
+const TasksFilter = ({ filter, onFilterChange }) => {
   return (
     <ul className="filters">
       <li>
-        <button className="selected">All</button>
+        <button
+          className={filter === 'all' ? 'selected' : ''}
+          onClick={() => onFilterChange('all')}
+        >
+          All
+        </button>
       </li>
       <li>
-        <button>Active</button>
+        <button
+          className={filter === 'active' ? 'selected' : ''}
+          onClick={() => onFilterChange('active')}
+        >
+          Active
+        </button>
       </li>
       <li>
-        <button>Completed</button>
+        <button
+          className={filter === 'completed' ? 'selected' : ''}
+          onClick={() => onFilterChange('completed')}
+        >
+          Completed
+        </button>
       </li>
     </ul>
   );
-}
+};
+
+export default TasksFilter;

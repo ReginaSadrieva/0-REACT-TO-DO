@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -15,6 +16,7 @@
     "*.{js,jsx,json,css,md}": "prettier --write"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

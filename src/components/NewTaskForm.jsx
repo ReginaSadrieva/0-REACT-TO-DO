@@ -1,12 +1,25 @@
-export default function NewTaskForm() {
+import { useState } from 'react';
+
+const NewTaskForm = ({ onAddTask }) => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onAddTask(inputValue);
+    setInputValue('');
+  };
+
   return (
-    <header className="header">
-      <h1>todos</h1>
+    <form onSubmit={handleSubmit}>
       <input
         className="new-todo"
         placeholder="What needs to be done?"
-        autofocus
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        autoFocus
       />
-    </header>
+    </form>
   );
-}
+};
+
+export default NewTaskForm;
