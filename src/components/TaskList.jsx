@@ -1,6 +1,14 @@
 import Task from './Task';
 
-const TaskList = ({ tasks, onToggle, onDelete }) => {
+const TaskList = ({
+  tasks,
+  onToggle,
+  onDelete,
+  editingId,
+  onEdit,
+  onSave,
+  onCancel,
+}) => {
   return (
     <ul className="todo-list">
       {tasks.map((task) => (
@@ -9,6 +17,10 @@ const TaskList = ({ tasks, onToggle, onDelete }) => {
           task={task}
           onToggle={onToggle}
           onDelete={onDelete}
+          onEdit={onEdit}
+          onSave={onSave}
+          onCancel={onCancel}
+          isEditing={editingId === task.id} // only this task shows edit input
         />
       ))}
     </ul>
