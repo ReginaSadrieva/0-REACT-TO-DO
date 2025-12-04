@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { formatDistanceToNow } from 'date-fns';
+import PropTypes from 'prop-types';
 
 const Task = ({
   task,
@@ -71,4 +72,24 @@ const Task = ({
   );
 };
 
+// PropTypes — helps catch bugs and makes code self-documenting
+Task.propTypes = {
+  task: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    createdAt: PropTypes.instanceOf(Date).isRequired,
+  }).isRequired,
+  onToggle: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  isEditing: PropTypes.bool.isRequired,
+};
+
+// defaultProps — safe defaults
+Task.defaultProps = {
+  isEditing: false,
+};
 export default Task;

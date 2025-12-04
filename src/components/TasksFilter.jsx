@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const TasksFilter = ({ filter, onFilterChange }) => {
   return (
     <ul className="filters">
@@ -27,6 +29,11 @@ const TasksFilter = ({ filter, onFilterChange }) => {
       </li>
     </ul>
   );
+};
+
+TasksFilter.propTypes = {
+  filter: PropTypes.oneOf(['all', 'active', 'completed']).isRequired,
+  onFilterChange: PropTypes.func.isRequired,
 };
 
 export default TasksFilter;

@@ -4,6 +4,7 @@ import TaskList from './components/TaskList';
 import Footer from './components/Footer';
 import './index.css';
 
+// Main component — controls everything
 function App() {
   // All tasks stored here — parent component state
   const [tasks, setTasks] = useState([
@@ -27,12 +28,13 @@ function App() {
     },
   ]);
 
+  // Which filter is active? 'all' | 'active' | 'completed'
   const [filter, setFilter] = useState('all');
 
-  // Tracks which task is currently being edited (id or null)
+  // Tracks which task is currently being edited (id or null, null = no editing)
   const [editingId, setEditingId] = useState(null);
 
-  // Add new task
+  // Add new task when user presses Enter in input
   const addTask = (description) => {
     if (!description.trim()) return;
     const newTask = {
@@ -44,7 +46,7 @@ function App() {
     setTasks([...tasks, newTask]);
   };
 
-  // Toggle completed/active
+  // Click checkbox → mark task as done/undone
   const toggleTask = (id) => {
     setTasks(
       tasks.map((task) =>
@@ -53,14 +55,14 @@ function App() {
     );
   };
 
-  // Delete task
+  // Delete task by clicking cross icon
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
     // If we're deleting the task being edited, exit edit mode
     if (editingId === id) setEditingId(null);
   };
 
-  // Start editing a task
+  // Start editing a task by clicking on pencil icon
   const startEditing = (id) => {
     setEditingId(id);
   };
@@ -92,7 +94,7 @@ function App() {
     setEditingId(null);
   };
 
-  // Filter logic
+  // Filter logic show only the tasks user wants to see
   const filteredTasks = tasks.filter((task) => {
     if (filter === 'active') return !task.completed;
     if (filter === 'completed') return task.completed;
